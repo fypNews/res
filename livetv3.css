@@ -1,0 +1,230 @@
+
+    #dplayer {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      width: 100%;
+      height: 100%;
+      z-index: -1000;
+    }
+
+    .fixs-content {
+      height: 260px;
+      padding: 0;
+      overflow-y: scroll;
+      background-color: #0000
+    }
+
+    .video-container {
+      position: relative;
+      margin-top: 0px;
+    }
+
+    .video-container:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-bottom: 60.25%;
+    }
+
+    .video-container>div {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    .video-container video {
+      width: 100%;
+      height: 100%;
+    }
+
+    .embed-container {
+      position: relative;
+      padding-bottom: 57.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+    border-radius:15px
+    }
+
+    .embed-container iframe,
+    .embed-container object,
+    .embed-container embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100%;
+    }
+
+    .stick {
+      position: absolute;
+      top: 0.5rem;
+      right: 1rem;
+      font-size: 11px;
+      line-height: 1em;
+      font-weight: 500;
+      padding: 6px 5px;
+      border-radius: 20px;
+      z-index: 4;
+      background: #00ff0000
+    }
+
+    .stick.stick-live,
+    .badge-live {
+      background: #00ff0000;
+      margin-left: 5px;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    .stick.stick-live .dot,
+    .badge-live .dot {
+      background: #fff;
+      margin: 2px 5px 2px 0;
+      float: left;
+      animation: blind .5s linear infinite;
+      opacity: 0
+    }
+
+    @keyframes blind {
+      0% {
+        opacity: 0
+      }
+
+      100% {
+        opacity: 1
+      }
+    }
+
+    .sticks {
+      position: absolute;
+      top: .8rem;
+      left: .6rem;
+      font-size: 8px;
+      line-height: 1em;
+      font-weight: 500;
+      padding: 6px 10px;
+      border-radius: 6px;
+      z-index: 4;
+      background: #3b3d42
+    }
+
+    .sticks.sticks-lives,
+    .badge-lives {
+      background: #f2152d;
+      margin-left: 5px;
+      color: #fff;
+      text-transform: uppercase;
+      box-shadow: 0 0 20px rgba(251, 8, 64, .5)
+    }
+
+    .sticks.sticks-lives-live .dot,
+    .badge-live .dot {
+      background: #fff;
+      margin: 2px 5px 2px 0;
+      float: left;
+      animation: blind .5s linear infinite;
+      opacity: 0
+    }
+
+    @keyframes blind {
+      0% {
+        opacity: 0
+      }
+
+      100% {
+        opacity: 1
+      }
+    }
+
+    .stickz {
+      position: absolute;
+      bottom: .5rem;
+      left: .6rem;
+      font-size: 8px;
+      line-height: 1em;
+      font-weight: 500;
+      padding: 5px 8px;
+      border: 1px solid #ffff !important;
+      border-radius: 6px;
+      z-index: 4;
+      background: #3b3d42
+    }
+
+    .stickz.stickz-livez,
+    .badge-lives {
+      background: #f2152d;
+      margin-left: 5px;
+      color: #fff;
+      text-transform: uppercase;
+      box-shadow: 0 0 20px rgba(251, 8, 64, .5)
+    }
+
+    .stickz.stickz-livez-lives-live .dot,
+    .badge-live .dot {
+      background: #fff;
+      margin: 2px 5px 2px 0;
+      float: left;
+      animation: blind .5s linear infinite;
+      opacity: 0
+    }
+
+    @keyframes blind {
+      0% {
+        opacity: 0
+      }
+
+      100% {
+        opacity: 1
+      }
+    }
+
+    .atas {
+      position: absolute;
+      top: .6rem;
+      right: .6rem;
+      font-size: 8px;
+      line-height: 1em;
+      font-weight: 500;
+      padding: 5px 8px;
+      border: 1px solid #ffff !important;
+      border-radius: 6px;
+      z-index: 4;
+      background: #191b20
+    }
+
+    .kanan,
+    .badge-lives {
+      background: #191b20;
+      margin-left: 5px;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    .bawah {
+      position: absolute;
+      bottom: .6rem;
+      left: .5rem;
+      font-size: 8px;
+      line-height: 1em;
+      font-weight: 500;
+      padding: 5px 8px;
+      border: 1px solid #ffff !important;
+      border-radius: 5px;
+      z-index: 4;
+      background: #191b20
+    }
+
+    .kiri,
+    .badge-lives {
+      background: #191b20;
+      margin-left: 5px;
+      color: #fff;
+      text-transform: uppercase;
+    }
+ 
