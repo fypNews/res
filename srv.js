@@ -197,7 +197,7 @@ function zh44(){document.getElementById("tv")
 function sctv(){document.getElementById("tv")
 .src="https://tv.iframe.eu.org/lokal/sctv" }
 function indosiar(){document.getElementById("tv")
-.src="https://tv.iframe.eu.org/lokal/indosiar" }
+.src="https://tv.iframe.eu.org/hls/indosiar" }
 
 <!--Movie-->
 function thrill(){document.getElementById("tv")
