@@ -31,38 +31,30 @@
     <div id="container"></div>
 
      <script type="text/javascript">
-        //<![CDATA[
-        jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';
-
-        // Mengganti URL file
-        var player = jwplayer("container");
-        var playlist = player.getPlaylist();
-
-        for (var i = 0; i < playlist[0].sources.length; i++) {
-            var source = playlist[0].sources[i];
-            if (source.file.indexOf('https://nyanv-live-cdn.mncnow.id/') !== -1) {
-                source.file = source.file.replace('https://nyanv-live-cdn.mncnow.id/', 'https://anevia115.mncnow.id/');
-            }
-        }
-
-        // Muat ulang pemutar video dengan URL yang diperbarui
-        player.load(playlist);
-
+            //<![CDATA[
+            
+        jwplayer.key='XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo',
         jwplayer("container").setup({
+            
+            
             preload: 'metadata',
             controls: true,
             displaytitle: false,
             fullscreen: true,
             primary: 'html5',
             autostart: true,
+            
+            
             skin: {
                 name: 'ZheHacK',
             },
+            
             logo: {
                 file: 'https://cdn.jsdelivr.net/gh/ZheHacK/fypnews.id@main/image/ZheTV-Logo.png',
                 link: 'https://zhetv.eu.org',
                 position: 'control-bar'
             },
+            // Code Cast
             cast: {
                 appid: '9DFB77C0',
                 metadata: {
@@ -78,26 +70,29 @@
                 color: '#FFF',
                 fontSize: 14,
                 backgroundOpacity: 0,
-                edgeStyle: 'raised'
+                edgeStyle: 'raised' 
             },
             playlist: [
                 {
                     title: "ZheTV",
                     description: "ZheTV",
                     image: "https://cdn.jsdelivr.net/gh/ZheHacK/fypnews.id@main/image/copyright.png",
+                    
+                    
+                    
                     sources: [
                         {
-                            file: 'https://anevia115.mncnow.id/live/eds/ANTV/sa_dash_vmx/ANTV.mpd', // URL yang sudah diganti
-                            drm: {
-                                "clearkey": { "keyId": '4310edb8b9ffe79abb40bacafa778ec3', "key": 'aebb7e86d8a336d9a93d3dd8a41153cf' }
-                            },
-                            label: '0',
-                            'type': 'application/dash+xml',
-                            primary: 'html5',
-                        }
-                    ],
+                            file: 'aHR0cHM6Ly9ueWFudi1saXZlLWNkbi5tbmNub3cuaWQvbGl2ZS9lZHMvQU5UVi9zYV9kYXNoX3ZteC9BTlRWLm1wZA',
+            drm: {
+        "clearkey": {"keyId": '4310edb8b9ffe79abb40bacafa778ec3', "key": 'aebb7e86d8a336d9a93d3dd8a41153cf'}
+               },
+          label: '0',
+           'type': 'application/dash+xml',
+           primary: 'html5',
+           }
+       ],
                     tracks: [
-                        { "file": "<?php echo $cc; ?>", "kind": "captions", "default": "true" }
+                        {"file":"<?php echo $cc; ?>","kind":"captions","default":"true"}
                     ]
                 }
             ]
@@ -113,8 +108,8 @@
             "windowOpacity": 0,
             "color": "#ffff00"
         });
-
-        jwplayer("container").on('ready', function () {
+        
+                jwplayer("container").on('ready', function() {
             var sources = jwplayer("container").getPlaylistItem().sources;
             for (var i = 0; i < sources.length; i++) {
                 var file = sources[i].file;
@@ -125,8 +120,39 @@
             }
             jwplayer("container").load(sources);
         });
-        //]]>
+         //]]>
     </script>
-        
+        	<script>
+// Fungsi untuk mengganti URL
+function gantiURL() {
+    // Mendapatkan semua sumber video dari playlist
+    var sources = jwplayer("container").getPlaylistItem().sources;
+
+    // Iterasi melalui sumber-sumber tersebut
+    for (var i = 0; i < sources.length; i++) {
+        var file = sources[i].file;
+
+        // Mengecek apakah URL mengandung string yang ingin diganti
+        if (file.includes('https://nyanv-live-cdn.mncnow.id/live/eds/ANTV/sa_dash_vmx/ANTV.mpd')) {
+            // Mengganti URL dengan yang baru
+            sources[i].file = 'https://anevia115.mncnow.id/live/eds/ANTV/sa_dash_vmx/ANTV.mpd';
+        }
+    }
+
+    // Memuat sumber-sumber yang telah diubah
+    jwplayer("container").load(sources);
+}
+
+// Panggil fungsi gantiURL ketika Anda ingin mengganti URL
+gantiURL();
+
+var meta = document.createElement('meta');
+meta.name = "referrer";
+meta.content = "no-referrer";
+document.getElementsByTagName('head')[0].appendChild(meta);
+
+</script>
+
+
 </body>
 </html>
